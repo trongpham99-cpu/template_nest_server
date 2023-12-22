@@ -29,33 +29,57 @@
 ## Installation
 
 ```bash
-$ yarn install
+$ npm install
 ```
 
 ## Running the app
 
 ```bash
-# development
-$ yarn run start
+# dev env
+$ npm run dev
 
-# watch mode
-$ yarn run start:dev
+# qc env
+$ npm run qc
 
-# production mode
-$ yarn run start:prod
+# uat env
+$ npm run uat
+
+# npm run build before run all the command line below
+$ npm run build
+
+# start dev after build source
+$ npm run start:dev
+
+# start qc after build source
+$ npm run start:qc
+
+# start uat after build source
+$ npm run start:uat
+
+# start production after build source
+$ npm run start:prod
+
+# docker build qc
+$ docker build -f dockers/Dockerfile.qc -t socket.qc .
+
+# docker run qc
+$ docker compose -f dockers/docker-compose.qc.yml up -d
+
+# docker build and run qc
+$ make build-qc
 ```
 
 ## Test
 
 ```bash
 # unit tests
-$ yarn run test
+$ npm run test
 
 # e2e tests
-$ yarn run test:e2e
+$ npm run test:e2e
 
 # test coverage
-$ yarn run test:cov
+$ npm run test:cov
 ```
 
 ## Support
@@ -64,11 +88,12 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 
 ## Stay in touch
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+-   Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
+-   Website - [https://nestjs.com](https://nestjs.com/)
+-   Twitter - [@nestframework](https://twitter.com/nestframework)
 
 ## License
 
 Nest is [MIT licensed](LICENSE).
-# template_nest_server
+
+# Push dev
