@@ -12,7 +12,7 @@ import { keyAuthorHeaderAttach } from './const';
 
 @Injectable()
 export class AuthMiddleware implements NestMiddleware {
-    constructor(private authService: AuthService) { }
+    constructor(private authService: AuthService) {}
 
     async use(req: Request, _res: Response, next: NextFunction) {
         const tokenArr: string[] =
